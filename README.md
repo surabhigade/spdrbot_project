@@ -1,13 +1,13 @@
 # SpiderBot – Quadruped Locomotion in Isaac Lab
 
-This repository contains my custom reinforcement learning environment for training a **12-joint quadruped "spiderbot"** to walk using **NVIDIA Isaac Lab**.
+This repository contains my custom reinforcement learning environment for training a **12-joint quadruped spiderbot** to walk using **NVIDIA Isaac Lab**.
 
 The core contributions are:
 
 * A custom robot asset loaded from USD
 * A locomotion RL environment
 * A reward function for stable walking
-* PPO training configs (RSL-RL + SKRL)
+* PPO and AMP training configs (RSL-RL + SKRL)
 * Gym registration so the task runs inside Isaac Lab
 
 ---
@@ -18,9 +18,7 @@ The core contributions are:
 * Wrapped the robot as an Isaac Lab **Articulation**
 * Designed a custom **DirectRLEnv**
 * Defined observations, actions, rewards, and termination
-* Trained using **PPO** (RSL-RL & SKRL)
-
-This is not a template — all logic is custom for this robot.
+* Trained using **PPO** and **AMP**(RSL-RL & SKRL)
 
 ---
 
@@ -52,22 +50,6 @@ Update:
 
 ```python
 usd_path="/path/to/your/spdrbot_video.usd"
-```
-
----
-
-## Run Checks
-
-List environments:
-
-```bash
-python scripts/list_envs.py
-```
-
-Test with random actions:
-
-```bash
-python scripts/random_agent.py --task Template-Spdrbot-Project-Direct-v0 --num_envs 64
 ```
 
 ---
@@ -114,22 +96,3 @@ source/
 * **Control rate**: 30 Hz
 * **Parallel envs**: 1024 (GPU)
 
----
-
-## Notes
-
-* Training is GPU-only (CPU is very slow)
-* Reward tuning is inside `compute_rewards()`
-* Gait emerges from reward + physics (not scripted)
-
----
-
-**Author**: Surabhi Gade
-**Framework**: NVIDIA Isaac Lab
-#find /home/surabhi/spdrbot_project -name "__pycache__" -type d -exec rm -rf {} +
-
-#python /home/surabhi/spdrbot_project/spdrbot_project/scripts/rsl_rl/train.py --task Template-Spdrbot-Project-Direct-v0  --num_envs 1024
-
-#source /home/surabhi/isaacsim/setup_conda_env.sh
-
-#-ubuntu:~/isaacsim$ ------  ./isaac-sim.selector.sh
