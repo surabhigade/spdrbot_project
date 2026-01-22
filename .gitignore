@@ -75,3 +75,9 @@ tests/
 .flake8
 .gitattributes
 .pre-commit-config.yaml
+
+#python /home/surabhi/spdrbot_project/spdrbot_project/scripts/rsl_rl/train.py --task Template-Spdrbot-Project-Direct-v0  --num_envs 1024
+
+#source /home/surabhi/isaacsim/setup_conda_env.sh
+
+#-ubuntu:~/isaacsim$ ------  ./isaac-sim.selector.sh
