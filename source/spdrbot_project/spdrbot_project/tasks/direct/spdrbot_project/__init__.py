@@ -6,14 +6,6 @@
 import gymnasium as gym
 
 from . import agents
-#from . import tasks
-#from .env import SpdrbotProjectEnv
-#from .spdrbot_project_env_cfg import SpdrbotProjectEnvCfg
-
-##
-# Register Gym environments.
-##
-
 
 gym.register(
     id="Template-Spdrbot-Project-Direct-v0",
@@ -26,14 +18,3 @@ gym.register(
         "skrl_cfg_entry_point": f"{agents.__name__}:skrl_ppo_cfg.yaml",
     },
 )
-
-"""_
-    gym.register(
-    id="Isaac-Spdrbot-v0",
-    entry_point="spdrbot_project.tasks.env:SpdrbotProjectEnv",
-    disable_env_checker=True,
-    kwargs={
-        "env_cfg_entry_point": SpdrbotProjectEnvCfg,
-    },
-)
-"""
