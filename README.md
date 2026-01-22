@@ -11,7 +11,9 @@ The core contributions are:
 * Gym registration so the task runs inside Isaac Lab
 
 ---
+Refer blog for detailed description: https://medium.com/p/9e5818686f05
 
+---
 ## What I Built
 
 * Imported a CAD → URDF → USD quadruped into Isaac Sim
