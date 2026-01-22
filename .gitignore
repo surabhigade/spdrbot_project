@@ -69,3 +69,9 @@ tests/
 
 # Docker history
 .isaac-lab-docker-history
+
+# Config files to ignore
+.dockerignore
+.flake8
+.gitattributes
+.pre-commit-config.yaml
