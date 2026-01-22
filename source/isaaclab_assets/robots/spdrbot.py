@@ -5,7 +5,7 @@ from isaaclab.actuators import ImplicitActuatorCfg
 ## Configuration for the Spiderbot using a USD file
 SPDRBOT_CFG = ArticulationCfg(
     spawn=sim_utils.UsdFileCfg(
-        usd_path="/home/surabhi/Downloads/V3urdfassembly_spdrbot_description (1)/spdrbot_video.usd", # Check this path!
+        usd_path="/home/surabhi/Downloads/V3urdfassembly_spdrbot_description (1)/spdrbot_video.usd", 
         rigid_props=sim_utils.RigidBodyPropertiesCfg(
             disable_gravity=False,
             retain_accelerations=False,
@@ -16,7 +16,7 @@ SPDRBOT_CFG = ArticulationCfg(
             max_depenetration_velocity=1.0,
         ),
         
-    ), # <--- Closes UsdFileCfg
+    ), 
     init_state=ArticulationCfg.InitialStateCfg(
         pos=(0.0, 0.0, 0.5),
         joint_pos={".*": 0.0},
