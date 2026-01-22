@@ -133,3 +133,10 @@ Some examples of packages that can likely be excluded are:
 "<path-to-isaac-sim>/extscache/omni.services.*"     // Services tools
 ...
 ```
+#find /home/surabhi/spdrbot_project -name "__pycache__" -type d -exec rm -rf {} +
+
+#python /home/surabhi/spdrbot_project/spdrbot_project/scripts/rsl_rl/train.py --task Template-Spdrbot-Project-Direct-v0  --num_envs 1024
+
+#source /home/surabhi/isaacsim/setup_conda_env.sh
+
+#-ubuntu:~/isaacsim$ ------  ./isaac-sim.selector.sh
