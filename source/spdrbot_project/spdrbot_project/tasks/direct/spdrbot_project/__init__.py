@@ -1,0 +1,39 @@
+# Copyright (c) 2022-2025, The Isaac Lab Project Developers (https://github.com/isaac-sim/IsaacLab/blob/main/CONTRIBUTORS.md).
+# All rights reserved.
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+import gymnasium as gym
+
+from . import agents
+#from . import tasks
+#from .env import SpdrbotProjectEnv
+#from .spdrbot_project_env_cfg import SpdrbotProjectEnvCfg
+
+##
+# Register Gym environments.
+##
+
+
+gym.register(
+    id="Template-Spdrbot-Project-Direct-v0",
+    entry_point=f"{__name__}.spdrbot_project_env:SpdrbotProjectEnv",
+    disable_env_checker=True,
+    kwargs={
+        "env_cfg_entry_point": f"{__name__}.spdrbot_project_env_cfg:SpdrbotProjectEnvCfg",
+        "rsl_rl_cfg_entry_point": f"{agents.__name__}.rsl_rl_ppo_cfg:PPORunnerCfg",
+        "skrl_amp_cfg_entry_point": f"{agents.__name__}:skrl_amp_cfg.yaml",
+        "skrl_cfg_entry_point": f"{agents.__name__}:skrl_ppo_cfg.yaml",
+    },
+)
+
+"""_
+    gym.register(
+    id="Isaac-Spdrbot-v0",
+    entry_point="spdrbot_project.tasks.env:SpdrbotProjectEnv",
+    disable_env_checker=True,
+    kwargs={
+        "env_cfg_entry_point": SpdrbotProjectEnvCfg,
+    },
+)
+"""
