@@ -1,0 +1,364 @@
+<?xml version="1.0" ?>
+<robot name="V3urdfassembly_spdrbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find V3urdfassembly_spdrbot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find V3urdfassembly_spdrbot_description)/urdf/V3urdfassembly_spdrbot.trans" />
+<xacro:include filename="$(find V3urdfassembly_spdrbot_description)/urdf/V3urdfassembly_spdrbot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0016257587405971215 -0.000432235980693348 0.005179271310120523" rpy="0 0 0"/>
+    <mass value="0.2840009993439013"/>
+    <inertia ixx="0.000329" iyy="0.000156" izz="0.000448" ixy="2e-06" iyz="7e-06" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Ecoxaf1_1">
+  <inertial>
+    <origin xyz="-0.00012679784745309175 -0.020615197942598668 -0.013423156219736653" rpy="0 0 0"/>
+    <mass value="0.0879239313810002"/>
+    <inertia ixx="1.2e-05" iyy="1.2e-05" izz="9e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.024814 0.035039 -0.026629" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Ecoxaf1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.024814 0.035039 -0.026629" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Ecoxaf1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Efemur1_1">
+  <inertial>
+    <origin xyz="-0.017308607845185273 -0.01917419025670488 0.0004781181364475161" rpy="0 0 0"/>
+    <mass value="0.03647126161887425"/>
+    <inertia ixx="5e-06" iyy="1e-05" izz="1.4e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.044595 0.05901 -0.018247" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Efemur1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.044595 0.05901 -0.018247" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Efemur1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Etibiaf1_1">
+  <inertial>
+    <origin xyz="-0.019016855014766562 -0.0015055963974898307 -0.011420669810764339" rpy="0 0 0"/>
+    <mass value="0.08999537664934634"/>
+    <inertia ixx="3.4e-05" iyy="3.7e-05" izz="6e-06" ixy="0.0" iyz="-1e-06" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.044485 0.096498 -0.019178" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Etibiaf1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.044485 0.096498 -0.019178" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Etibiaf1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Ecoxab2_1">
+  <inertial>
+    <origin xyz="7.230796985748661e-06 -0.020568672578849083 -0.01342484604886099" rpy="0 0 0"/>
+    <mass value="0.0879252262317009"/>
+    <inertia ixx="1.2e-05" iyy="1.2e-05" izz="9e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.023432 0.034549 -0.02662" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Ecoxab2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.023432 0.034549 -0.02662" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Ecoxab2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Efemur2_1">
+  <inertial>
+    <origin xyz="0.017195902338996108 -0.01926850099184116 0.0006818376686759976" rpy="0 0 0"/>
+    <mass value="0.03647126165237659"/>
+    <inertia ixx="5e-06" iyy="1e-05" izz="1.4e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.043351 0.058296 -0.018234" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Efemur2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.043351 0.058296 -0.018234" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Efemur2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Etibiab2_1">
+  <inertial>
+    <origin xyz="0.019837857535779675 -0.0018045592112206355 -0.011399873698339722" rpy="0 0 0"/>
+    <mass value="0.08999530861267938"/>
+    <inertia ixx="3.4e-05" iyy="3.7e-05" izz="6e-06" ixy="0.0" iyz="-1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.04346 0.095772 -0.019564" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Etibiab2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.04346 0.095772 -0.019564" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Etibiab2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Ecoxaf3_1">
+  <inertial>
+    <origin xyz="0.00014125714695364597 0.01964831578580526 -0.014417869543242137" rpy="0 0 0"/>
+    <mass value="0.08801773866261996"/>
+    <inertia ixx="1.2e-05" iyy="1.2e-05" izz="9e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.023224 -0.035658 -0.024877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Ecoxaf3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.023224 -0.035658 -0.024877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Ecoxaf3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Efemur3_1">
+  <inertial>
+    <origin xyz="0.017305399288154763 0.018213657507271892 -0.0004543492776636817" rpy="0 0 0"/>
+    <mass value="0.03647126164543977"/>
+    <inertia ixx="5e-06" iyy="1e-05" izz="1.4e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.043006 -0.058915 -0.015324" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Efemur3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.043006 -0.058915 -0.015324" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Efemur3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Etibiaf3_1">
+  <inertial>
+    <origin xyz="0.019067084191632798 0.0009385150093041 -0.011483114407644475" rpy="0 0 0"/>
+    <mass value="0.08999537955797487"/>
+    <inertia ixx="3.4e-05" iyy="3.7e-05" izz="6e-06" ixy="-0.0" iyz="-0.0" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.042897 -0.096403 -0.014393" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Etibiaf3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.042897 -0.096403 -0.014393" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Etibiaf3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Ecoxab4_1">
+  <inertial>
+    <origin xyz="-2.6642878115171187e-05 0.019616379817789666 -0.014426809255020472" rpy="0 0 0"/>
+    <mass value="0.08801618535819958"/>
+    <inertia ixx="1.2e-05" iyy="1.2e-05" izz="9e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.025022 -0.035169 -0.024913" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Ecoxab4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.025022 -0.035169 -0.024913" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Ecoxab4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Efemur4_1">
+  <inertial>
+    <origin xyz="-0.017198554600061887 0.018314111879120784 -0.00045273284770270227" rpy="0 0 0"/>
+    <mass value="0.03647126161887411"/>
+    <inertia ixx="5e-06" iyy="1e-05" izz="1.4e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.044939 -0.058209 -0.015363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Efemur4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.044939 -0.058209 -0.015363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Efemur4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Etibiab4_1">
+  <inertial>
+    <origin xyz="-0.019061103346557542 0.0011110216537605494 -0.011484765477927147" rpy="0 0 0"/>
+    <mass value="0.08999538222754644"/>
+    <inertia ixx="3.4e-05" iyy="3.7e-05" izz="6e-06" ixy="0.0" iyz="-0.0" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.045049 -0.095697 -0.014433" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Etibiab4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.045049 -0.095697 -0.014433" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://V3urdfassembly_spdrbot_description/meshes/Etibiab4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute80" type="continuous">
+  <origin xyz="0.024814 -0.035039 0.026629" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Ecoxaf1_1"/>
+  <axis xyz="-7.2e-05 -0.024823 -0.999692"/>
+</joint>
+
+<joint name="Revolute81" type="continuous">
+  <origin xyz="0.019781 -0.023971 -0.008382" rpy="0 0 0"/>
+  <parent link="Ecoxaf1_1"/>
+  <child link="Efemur1_1"/>
+  <axis xyz="-0.999996 0.002918 0.0"/>
+</joint>
+
+<joint name="Revolute82" type="continuous">
+  <origin xyz="-0.00011 -0.037488 0.000931" rpy="0 0 0"/>
+  <parent link="Efemur1_1"/>
+  <child link="Etibiaf1_1"/>
+  <axis xyz="-0.999996 0.002918 0.0"/>
+</joint>
+
+<joint name="Revolute83" type="continuous">
+  <origin xyz="-0.023432 -0.034549 0.02662" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Ecoxab2_1"/>
+  <axis xyz="-7.2e-05 -0.024823 -0.999692"/>
+</joint>
+
+<joint name="Revolute84" type="continuous">
+  <origin xyz="-0.019919 -0.023747 -0.008386" rpy="0 0 0"/>
+  <parent link="Ecoxab2_1"/>
+  <child link="Efemur2_1"/>
+  <axis xyz="0.999996 -0.002919 0.0"/>
+</joint>
+
+<joint name="Revolute85" type="continuous">
+  <origin xyz="-0.000109 -0.037476 0.00133" rpy="0 0 0"/>
+  <parent link="Efemur2_1"/>
+  <child link="Etibiab2_1"/>
+  <axis xyz="0.999996 -0.002919 0.0"/>
+</joint>
+
+<joint name="Revolute86" type="continuous">
+  <origin xyz="-0.023224 0.035658 0.024877" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Ecoxaf3_1"/>
+  <axis xyz="-7.2e-05 -0.024823 -0.999692"/>
+</joint>
+
+<joint name="Revolute87" type="continuous">
+  <origin xyz="-0.019782 0.023257 -0.009553" rpy="0 0 0"/>
+  <parent link="Ecoxaf3_1"/>
+  <child link="Efemur3_1"/>
+  <axis xyz="0.999996 -0.002918 -0.0"/>
+</joint>
+
+<joint name="Revolute88" type="continuous">
+  <origin xyz="0.000109 0.037488 -0.000931" rpy="0 0 0"/>
+  <parent link="Efemur3_1"/>
+  <child link="Etibiaf3_1"/>
+  <axis xyz="0.999996 -0.002918 -0.0"/>
+</joint>
+
+<joint name="Revolute89" type="continuous">
+  <origin xyz="0.025022 0.035169 0.024913" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Ecoxab4_1"/>
+  <axis xyz="-7.2e-05 -0.024823 -0.999692"/>
+</joint>
+
+<joint name="Revolute90" type="continuous">
+  <origin xyz="0.019917 0.02304 -0.00955" rpy="0 0 0"/>
+  <parent link="Ecoxab4_1"/>
+  <child link="Efemur4_1"/>
+  <axis xyz="-0.999996 0.002918 -0.0"/>
+</joint>
+
+<joint name="Revolute91" type="continuous">
+  <origin xyz="0.00011 0.037488 -0.00093" rpy="0 0 0"/>
+  <parent link="Efemur4_1"/>
+  <child link="Etibiab4_1"/>
+  <axis xyz="-0.999996 0.002918 -0.0"/>
+</joint>
+
+</robot>
